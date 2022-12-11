@@ -1,0 +1,28 @@
+package com.palle;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class Happy {
+        public static void main (String[] args) {
+        	ArrayList<Integer> list=new ArrayList<Integer>();
+        	list.add(15);
+        	list.add(8);
+        	list.add(9);
+        	list.add(95);
+        	list.add(57);
+        	Collections.sort(list);
+        	Collections.reverse(list);
+        	System.out.println(list);
+        	list.stream().sorted().forEach(s->System.out.println(s));
+        	list.stream().sorted(Comparator.reverseOrder()).forEach(s->System.out.println(s));
+        	
+ 
+}
+}
