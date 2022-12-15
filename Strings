@@ -1,0 +1,31 @@
+package com.palle;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map.Entry;
+import java.util.Set;
+public class occureances {
+       public static void main(String[] args) {
+    	   String s="aaaabbbcccdef  ";
+    	   char[] ch=s.toCharArray();
+    	  HashMap<Character,Integer> x=new HashMap<Character,Integer>();
+    	  for(char i:ch) {
+    		  if(!String.valueOf(i).isBlank()) {
+    			  if(x.containsKey(i)) {
+    				  x.put(i, x.get(i)+1);
+    			  }
+    			  else {
+    				  x.put(i, 1);
+    			  }
+    		  }
+    			  
+    	  }
+    	  StringBuilder sb=new StringBuilder();
+    	  for(Entry<Character,Integer> p:x.entrySet()){
+    		  sb.append(p.getKey());
+    		  sb.append(p.getValue());
+    		  
+    	  }
+    	  System.out.println(sb.toString());   				
+}
+}
